@@ -5,22 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tareas</title>
-    <link rel="stylesheet" href="./style.css">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon/tarea.png">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/dc06fe3696.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Listas de tareas</h1>
+        <h1>Lista de tareas</h1>
         <div class="tareasList">
             <form>
-                <input type="text" placeholder="Agrega tu tarea..">
-                <button class="btn-add">+</button>
+                <input type="text" placeholder="¿Qué haremos hoy?">
+                <button class="btn-add"><i class="fas fa-plus-circle"></i></button>
             </form>
         </div>
         <div class="li-container">
             <ul></ul>
         </div>
         <div class="empty">
-            <p>No tiene tareas pendientes.</p>
+            <p>No tiene tareas pendientes. <i class="fa-regular fa-face-laugh-beam"></i></p>
         </div>
     </div>
 

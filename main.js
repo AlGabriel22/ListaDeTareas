@@ -3,50 +3,50 @@ const addBtn = document.querySelector(".btn-add");
 const ul = document.querySelector("ul");
 const empty = document.querySelector(".empty");
 
-addBtn.addEventListener("click", (e)=>{
+addBtn.addEventListener("click", (e) => {
 
-e.preventDefault();
+  e.preventDefault();
 
-const text = input.value;
+  const text = input.value;
 
-if (text !== ""){
+  if (text !== "") {
 
-  const li = document.createElement("li");
-  const p = document.createElement("p");
+    const li = document.createElement("li");
+    const p = document.createElement("p");
 
-  p.textContent = text;
+    p.textContent = text;
 
-  li.appendChild(p);
-  ul.appendChild(li);
-  li.appendChild(addDeleteBtn());
+    li.appendChild(p);
+    ul.appendChild(li);
+    li.appendChild(addDeleteBtn());
 
-  input.value = "";
-  empty.style.display = "none";
+    input.value = "";
+    empty.style.display = "none";
 
-}
+  }
 
-}); 
+});
 
-function addDeleteBtn () {
+function addDeleteBtn() {
 
   const deleteBtn = document.createElement("button");
 
   deleteBtn.textContent = "X";
   deleteBtn.className = "btn-delete";
 
-  deleteBtn.addEventListener("click", (e)=>{
-  
+  deleteBtn.addEventListener("click", (e) => {
+
     const item = e.target.parentElement;
-    
+
     ul.removeChild(item);
-    
+
     const items = document.querySelectorAll("li");
-    
-    if(items.length === 0) {
-                              empty.style.display = "block"
-}
+
+    if (items.length === 0) {
+      empty.style.display = "block"
+    }
   });
- 
+
   return deleteBtn;
 
 }
